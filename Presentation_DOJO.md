@@ -35,25 +35,22 @@ section.diagram {
   background: #ffffff;
   color: #123b70;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 20px 30px 10px;
+  padding: 16px 20px 10px;
 }
 
 section.diagram h1 {
   color: #123b70;
   border-bottom: 5px solid #ffd447;
-  padding-bottom: 0.2em;
-  margin-bottom: 0.3em;
+  padding-bottom: 0.15em;
+  margin-bottom: 0.2em;
   font-size: 1.4em;
-  flex-shrink: 0;
 }
 
 section.diagram img {
-  flex: 1 1 0;
-  min-height: 0;
+  display: block;
+  margin: 0 auto;
   max-width: 100%;
+  max-height: 600px;
   object-fit: contain;
 }
 </style>
@@ -68,4 +65,4 @@ section.diagram img {
 <!-- _class: diagram -->
 # **State diagram**
 
-![State diagram](./stateDiagram.png)
+![h:600px](./stateDiagram.png)
