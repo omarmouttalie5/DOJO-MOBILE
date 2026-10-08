@@ -27,11 +27,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build presentation
+      - name: Build Marp presentation
         run: |
           mkdir -p site
           npx --yes @marp-team/marp-cli@4.2.3 Presentation_DOJO.md --html --output site/index.html
           cp stateDiagram.png site/stateDiagram.png
+
+      - name: Copy static assets
+        run: |
+          cp -r assets site/assets
+          cp index.md site/index.md
+          cp README.md site/README.md
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
